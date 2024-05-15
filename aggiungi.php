@@ -2,20 +2,20 @@
 include_once __DIR__ . '/header.php';
 include_once __DIR__ . '/class/database.php';
 
-// Controlla se il modulo è stato inviato
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Prendi i dati dal modulo
+    
     $titolo = $_POST['titolo'];
     $genere = $_POST['genere'];
     $anno = $_POST['anno'];
 
-    // Validazione dei dati (puoi aggiungere ulteriori controlli qui se necessario)
+   
 
-    // Connessione al database
+    
     $db = new Database();
     $conn = $db->getConnection();
 
-    // Query per inserire il nuovo film nel database
+   
     $query = "INSERT INTO film (titolo, genere, anno) VALUES (:titolo, :genere, :anno)";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(':titolo', $titolo);
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':anno', $anno);
 
     if ($stmt->execute()) {
-        // Inserimento riuscito, reindirizza alla pagina principale
+        //reindirizza alla pagina principale
         header("Location: index.php");
         exit;
     } else {
