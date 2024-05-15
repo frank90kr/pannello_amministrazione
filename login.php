@@ -56,10 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
+<body class="d-flex align-items-center py-4 bg-secondary">
 <main class="form-signin w-25 m-auto">
     <form method="POST">
-        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <h1 class="h3 mb-3 fw-normal text-white">Login</h1>
         <?php if (!empty($error_message)) : ?>
             <div class="alert alert-danger" role="alert">
                 <?php echo $error_message; ?>
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="form-check text-start my-3">
             <input class="form-check-input" type="checkbox" value="remember-me" id="remember-me">
-            <label class="form-check-label" for="remember-me">
+            <label class="form-check-label text-white" for="remember-me">
                 Remember me
             </label>
         </div>

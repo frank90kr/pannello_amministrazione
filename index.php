@@ -48,12 +48,13 @@ $result = $conn->query($query);
     <title>Lista dei film</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="bg-tertiary">
+<body class="bg-secondary">
     <div class="container">
-        <h1 class="mt-4">Lista dei film presenti nel database</h1>
+        <h1 class="mt-4 text-white">Lista dei film presenti nel database</h1>
         <ul class="list-group mt-4">
             <?php foreach ($result as $row): ?>
-                <li class="list-group-item d-flex justify-content-between align-items-center text-primary fs-5">
+                <li class="list-group-item bg-body-secondary border border-dark-subtle d-flex justify-content-between align-items-center text-dark fs-5 p-3 fw-medium">
+                    
                     <?php echo $row['titolo']; ?> - <?php echo $row['genere']; ?> (<?php echo $row['anno']; ?>)
                     <div class="btn-group" role="group" aria-label="Modifica o elimina">
                         <form action="modifica.php" method="POST">
