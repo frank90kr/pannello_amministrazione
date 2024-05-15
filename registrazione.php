@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </label>
         </div>
         
-        <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        <button class="btn btn-primary w-100 py-2" type="submit">Registrati</button>
     </form>
     <p class="mt-3 mb-0 text-white">Hai già un account? <a class="text-black ms-2" href="login.php">Accedi qui.</a></p>
 </main>
